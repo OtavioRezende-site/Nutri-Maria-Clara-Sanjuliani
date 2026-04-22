@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,7 +27,7 @@
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Montserrat', 'sans-serif'],
                     },
                 }
             }
@@ -137,6 +137,11 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1f140e; }
         ::-webkit-scrollbar-thumb { background: #c5a059; border-radius: 4px; }
+        .active-plano {
+            border-color: #c5a059 !important;
+            background-color: rgba(197, 160, 89, 0.1) !important;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.1);
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -147,9 +152,9 @@
             <!-- Logo & Name -->
             <div class="flex items-center gap-2 md:gap-4 flex-1 min-w-0">
                 <img src="public/1000245389-removebg-preview.png" alt="Logo Dra. Maria Clara" class="h-10 md:h-14 w-auto" referrerPolicy="no-referrer">
-                <div class="font-serif uppercase text-brand-gold leading-tight tracking-[0.1em] md:tracking-[0.2em]">
-                    <span class="block text-[10px] md:text-lg whitespace-nowrap">Dra. Maria Clara</span>
-                    <span class="block text-[10px] md:text-lg whitespace-nowrap">Sanjuliani</span>
+                <div class="font-sans font-light uppercase text-brand-gold leading-tight tracking-[0.2em] overflow-hidden">
+                    <span class="block text-[8px] sm:text-[9px] md:text-sm whitespace-nowrap overflow-hidden text-ellipsis">Dra. Maria Clara</span>
+                    <span class="block text-[8px] sm:text-[9px] md:text-sm whitespace-nowrap overflow-hidden text-ellipsis">Sanjuliani</span>
                 </div>
             </div>
             
@@ -234,9 +239,9 @@
                     <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold italic">Nutrição Estratégica & Avançada</span>
                 </div>
                 
-                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight md:leading-[0.9] tracking-tight">
-                    Transforme seu corpo de <br /> 
-                    <span class="italic text-brand-gold">dentro para fora.</span>
+                <h1 class="font-sans font-light text-3xl md:text-5xl lg:text-6xl leading-[1.2] tracking-[0.3em] uppercase">
+                    Transforme seu corpo <br class="hidden md:block" /> 
+                    <span class="text-brand-gold">de dentro para fora.</span>
                 </h1>
                 
                 <p class="text-lg md:text-2xl font-light opacity-80 leading-relaxed max-w-2xl italic">
@@ -273,7 +278,7 @@
                 <!-- Quiz Header -->
                 <div id="quiz-intro" class="text-center space-y-6">
                     <div class="inline-block px-4 py-1.5 bg-brand-gold/10 rounded-full text-brand-gold text-[10px] font-black uppercase tracking-widest">Autoavaliação Rápida</div>
-                    <h2 class="font-serif text-4xl md:text-5xl italic">Como está sua <span class="text-brand-gold">Saúde Intestinal?</span></h2>
+                    <h2 class="font-sans font-light text-2xl md:text-4xl uppercase tracking-[0.3em]">Como está sua <span class="text-brand-gold">Saúde Intestinal?</span></h2>
                     <p class="opacity-60 font-light text-lg">Responda 3 perguntas rápidas e descubra o melhor caminho para o seu corpo.</p>
                     <button onclick="startQuiz()" class="bg-brand-gold text-brand-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm cta-hover gold-glow">Começar Quiz</button>
                 </div>
@@ -288,7 +293,7 @@
                     </div>
                     
                     <div id="quiz-question-container" class="space-y-6">
-                        <h3 id="quiz-question" class="font-serif text-2xl md:text-3xl italic">Você sente inchaço ou desconforto abdominal frequente?</h3>
+                        <h3 id="quiz-question" class="font-sans font-light text-xl md:text-2xl uppercase tracking-[0.1em]">Você sente inchaço ou desconforto abdominal frequente?</h3>
                         <div class="grid grid-cols-1 gap-4">
                             <button onclick="handleAnswer('Sempre')" class="quiz-opt w-full text-left px-8 py-5 rounded-2xl border border-white/10 hover:border-brand-gold/50 hover:bg-brand-gold/5 transition-all text-sm uppercase tracking-widest font-bold">A) Sim, quase sempre</button>
                             <button onclick="handleAnswer('Às vezes')" class="quiz-opt w-full text-left px-8 py-5 rounded-2xl border border-white/10 hover:border-brand-gold/50 hover:bg-brand-gold/5 transition-all text-sm uppercase tracking-widest font-bold">B) Às vezes, após as refeições</button>
@@ -302,7 +307,7 @@
                     <div class="h-20 w-20 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto text-brand-gold mb-6">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h2 class="font-serif text-4xl italic">Análise Concluída!</h2>
+                    <h2 class="font-sans font-light text-2xl md:text-4xl uppercase tracking-[0.3em]">Análise Concluída!</h2>
                     <p id="quiz-result-text" class="opacity-70 text-lg leading-relaxed"></p>
                     <div class="p-6 bg-brand-gold/5 border border-brand-gold/20 rounded-3xl space-y-4">
                         <p class="text-xs font-bold uppercase tracking-widest text-brand-gold italic">Ação Recomendada:</p>
@@ -352,24 +357,21 @@
                 
                 <div class="space-y-10">
                     <div class="space-y-4">
-                        <h2 class="font-serif text-4xl md:text-6xl leading-tight text-brand-gold italic">Ciência, Intestino e Cuidado.</h2>
-                        <p class="text-xl md:text-2xl font-light opacity-60">Dra. Maria Clara Sanjuliani</p>
+                        <h2 class="font-sans font-light text-3xl md:text-5xl leading-tight text-brand-gold uppercase tracking-[0.3em]">Sobre Mim.</h2>
+                        <p class="text-lg md:text-xl font-sans font-medium uppercase tracking-[0.1em] opacity-60">Dra. Maria Clara Sanjuliani</p>
                     </div>
                     
-                    <div class="space-y-6 text-lg opacity-80 leading-relaxed font-light">
+                    <div class="space-y-6 text-lg md:text-2xl font-serif text-brand-offwhite leading-relaxed italic font-light opacity-90">
                         <p>
-                            Minha missão é devolver a liberdade aos meus pacientes através de uma nutrição profunda e baseada em evidências. Formada pela <strong>UFRJ</strong> e com mais de uma década de atuação clínica, entendi que o intestino é o maestro da nossa saúde.
-                        </p>
-                        <p>
-                            Especialista pelo <strong>Instituto Denise de Carvalho</strong> e pós-graduada em Nutrição Ortomolecular, desenvolvi o <strong>Método RestauraBio</strong> para tratar a raiz dos problemas metabólicos, proporcionando emagrecimento real e bem-estar duradouro.
+                            "Especialista em saúde intestinal e pós-graduada em nutrição ortomolecular e fitoterapia proporcionando melhora da microbiota, emagrecimento real e bem-estar duradouro."
                         </p>
                     </div>
                     
                     <div class="grid grid-cols-2 gap-8 text-xs font-bold uppercase tracking-widest opacity-40">
-                        <p>✓ Nutrição Ortomolecular</p>
                         <p>✓ Saúde Gastrointestinal</p>
+                        <p>✓ Nutrição Ortomolecular</p>
+                        <p>✓ Fitoterapia Avançada</p>
                         <p>✓ Modulação Metabólica</p>
-                        <p>✓ Performance Saudável</p>
                     </div>
                 </div>
             </div>
@@ -380,67 +382,169 @@
     <section id="consultas" class="py-32 bg-[#1f140e]">
         <div class="px-6 md:px-12 lg:px-20 xl:px-40">
             <div class="text-center space-y-4 mb-24 fade-in">
-                <h2 class="font-serif text-5xl md:text-6xl">Como são minhas <span class="italic text-brand-gold">consultas</span></h2>
+                <h2 class="font-sans font-light text-3xl md:text-5xl uppercase tracking-[0.3em]">Agendamentos</h2>
                 <div class="h-1 w-24 bg-brand-gold mx-auto rounded-full"></div>
-                <p class="text-xl opacity-60 font-light italic max-w-2xl mx-auto">Modelos de atendimento pensados na sua conveniência e profundidade clínica.</p>
+                <p class="text-xl opacity-60 font-light italic max-w-2xl mx-auto">Selecione o plano ideal para iniciar sua transformação.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-stretch max-w-5xl mx-auto">
+                <!-- Card 1: Presencial -->
+                <div class="bg-white/[0.03] p-10 rounded-[40px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in flex flex-col h-full" id="card-presencial">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="font-sans font-light text-xl md:text-2xl uppercase tracking-[0.2em] mb-4">Atendimento Presencial</h3>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-black mb-6 opacity-80">Selecione uma das opções abaixo:</p>
+                    
+                    <div class="space-y-4 mb-12 flex-grow" id="options-presencial">
+                        <!-- Opção 1 -->
+                        <button onclick="selectPlano('presencial', 'Consulta Avulsa', 'R$ 350,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5 active-plano"
+                                data-plano="Consulta Avulsa">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Consulta Avulsa</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 350,00</span>
+                        </button>
+                        <!-- Opção 2 -->
+                        <button onclick="selectPlano('presencial', 'Pacote 3 Consultas', 'R$ 900,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5"
+                                data-plano="Pacote 3 Consultas">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Pacote 3 Consultas</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 900,00</span>
+                        </button>
+                        <!-- Opção 3 -->
+                        <button onclick="selectPlano('presencial', 'Pacote 4 Consultas', 'R$ 1.100,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5"
+                                data-plano="Pacote 4 Consultas">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Pacote 4 Consultas</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 1.100,00</span>
+                        </button>
+                    </div>
+
+                    <button onclick="enviarAgendamento('presencial')" 
+                            class="flex items-center justify-center gap-2 w-full py-5 rounded-full bg-brand-gold text-brand-dark text-center text-xs font-black uppercase tracking-widest hover:bg-brand-copper hover:text-white transition-all shadow-xl gold-glow">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        Agendar <span id="btn-text-presencial">Consulta Avulsa</span>
+                    </button>
+                </div>
+
+                <!-- Card 2: Online -->
+                <div class="bg-white/[0.03] p-10 rounded-[40px] border border-brand-gold/20 hover:border-brand-gold/60 transition-all duration-500 group fade-in flex flex-col h-full bg-brand-gold/[0.02]" id="card-online">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-video text-2xl"></i>
+                    </div>
+                    <h3 class="font-sans font-light text-xl md:text-2xl uppercase tracking-[0.2em] mb-4 text-brand-gold">Atendimento Online</h3>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-black mb-6 opacity-80">Selecione uma das opções abaixo:</p>
+                    
+                    <div class="space-y-4 mb-12 flex-grow" id="options-online">
+                        <!-- Opção 1 -->
+                        <button onclick="selectPlano('online', 'Consulta Avulsa', 'R$ 299,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5 active-plano"
+                                data-plano="Consulta Avulsa">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Consulta Avulsa</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 299,00</span>
+                        </button>
+                        <!-- Opção 2 -->
+                        <button onclick="selectPlano('online', 'Pacote 3 Consultas', 'R$ 700,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5"
+                                data-plano="Pacote 3 Consultas">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Pacote 3 Consultas</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 700,00</span>
+                        </button>
+                        <!-- Opção 3 -->
+                        <button onclick="selectPlano('online', 'Pacote 4 Consultas', 'R$ 900,00')" 
+                                class="plano-item w-full flex justify-between items-center p-5 rounded-2xl border border-white/10 hover:border-brand-gold/40 transition-all text-left bg-white/5"
+                                data-plano="Pacote 4 Consultas">
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-80">Pacote 4 Consultas</span>
+                            <span class="text-lg font-sans font-medium text-brand-gold">R$ 900,00</span>
+                        </button>
+                    </div>
+
+                    <button onclick="enviarAgendamento('online')" 
+                            class="flex items-center justify-center gap-2 w-full py-5 rounded-full bg-brand-gold text-brand-dark text-center text-xs font-black uppercase tracking-widest hover:bg-brand-copper hover:text-white transition-all shadow-xl">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        Agendar <span id="btn-text-online">Consulta Avulsa</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologias e Exames Section -->
+    <section class="py-32 bg-brand-dark">
+        <div class="px-6 md:px-12 lg:px-20 xl:px-40">
+            <div class="text-center mb-20 fade-in">
+                <h2 class="font-sans font-light text-3xl md:text-4xl uppercase tracking-[0.3em] text-brand-gold mb-4">Tecnologia & Diagnóstico</h2>
+                <p class="opacity-40 text-xs font-bold uppercase tracking-[0.3em]">Precisão para sua saúde</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white/[0.03] p-10 rounded-[40px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in flex flex-col h-full mx-auto w-full max-w-sm md:max-w-none">
-                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 transition-transform mx-auto md:mx-0">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <div class="bg-white/5 p-10 rounded-[32px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in text-center flex flex-col items-center justify-center space-y-6">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-weight text-2xl"></i>
                     </div>
-                    <h3 class="font-serif text-3xl mb-4 italic text-center md:text-left">Presencial</h3>
-                    <p class="opacity-60 text-sm leading-relaxed mb-8 flex-grow text-center md:text-left">Localizado no Flamengo/RJ. Experiência clínica completa com análise detalhada.</p>
-                    <div class="py-8 border-y border-white/5 mb-8 text-center md:text-left">
-                        <span class="text-4xl font-serif text-brand-gold">R$ 295,00</span>
+                    <div>
+                        <h4 class="text-brand-gold font-sans font-light text-base md:text-lg uppercase tracking-[0.15em] mb-2">Balança InBody</h4>
+                        <p class="text-[10px] font-black uppercase tracking-widest opacity-40">Bioimpedância Segmentada</p>
                     </div>
-                    <a href="https://wa.me/5521997318270?text=Olá%20Dra.%20Maria%20Clara!%20Gostaria%20de%20agendar%20uma%20Consulta%20Presencial%20no%20seu%20consultório%20no%20Catete." 
-                       target="_blank"
-                       class="flex items-center justify-center gap-2 w-full py-4 rounded-full border border-brand-gold text-brand-gold text-center text-xs font-black uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all">
-                        <i class="fab fa-whatsapp"></i>
-                        Agendar Presencial
-                    </a>
                 </div>
-
-                <!-- Card 2 (Premium Highlight) -->
-                <div class="relative bg-brand-gold/[0.08] p-10 rounded-[40px] border-2 border-brand-gold shadow-2xl z-10 fade-in flex flex-col h-full mx-auto w-full max-w-sm md:max-w-none md:scale-105" style="transition-delay: 0.1s">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-8 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg whitespace-nowrap">
-                        Plano Master
+                <!-- Card 2 -->
+                <div class="bg-white/5 p-10 rounded-[32px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in text-center flex flex-col items-center justify-center space-y-6" style="transition-delay: 0.1s">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-dna text-2xl"></i>
                     </div>
-                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/20 flex items-center justify-center text-brand-gold mb-8 mx-auto md:mx-0">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <div>
+                        <h4 class="text-brand-gold font-sans font-light text-base md:text-lg uppercase tracking-[0.15em] mb-2">LifeCode Nutri Bioma</h4>
+                        <p class="text-[10px] font-black uppercase tracking-widest opacity-40">Mapeamento Genético</p>
                     </div>
-                    <h3 class="font-serif text-4xl mb-4 italic text-brand-gold text-center md:text-left">Acompanhamento Premium</h3>
-                    <p class="opacity-80 text-sm leading-relaxed mb-8 flex-grow text-center md:text-left">O tratamento mais profundo. Modulação completa de microbiota e suporte contínuo.</p>
-                    <div class="py-8 border-y border-brand-gold/20 mb-8 text-center md:text-left">
-                        <span class="text-5xl font-serif text-brand-gold">R$ 895,00</span>
-                    </div>
-                    <a href="https://wa.me/5521997318270?text=Olá%20Dra.%20Maria%20Clara!%20Tenho%20interesse%20no%20Acompanhamento%20Premium%20Master%20e%20gostaria%20de%20mais%20informações%20sobre%20como%20iniciar." 
-                       target="_blank"
-                       class="flex items-center justify-center gap-2 w-full py-5 rounded-full bg-brand-gold text-brand-dark text-center text-xs font-black uppercase tracking-widest hover:bg-brand-copper hover:text-white transition-all shadow-xl">
-                        <i class="fab fa-whatsapp"></i>
-                        Quero o Premium
-                    </a>
                 </div>
-
                 <!-- Card 3 -->
-                <div class="bg-white/[0.03] p-10 rounded-[40px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in flex flex-col h-full mx-auto w-full max-w-sm md:max-w-none" style="transition-delay: 0.2s">
-                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 transition-transform mx-auto md:mx-0">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                <div class="bg-white/5 p-10 rounded-[32px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in text-center flex flex-col items-center justify-center space-y-6" style="transition-delay: 0.2s">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-microscope text-2xl"></i>
                     </div>
-                    <h3 class="font-serif text-3xl mb-4 italic text-center md:text-left">Online</h3>
-                    <p class="opacity-60 text-sm leading-relaxed mb-8 flex-grow text-center md:text-left">Atendimento flexível por vídeo para todo o Brasil e exterior, mantendo rigor técnico.</p>
-                    <div class="py-8 border-y border-white/5 mb-8 text-center md:text-left">
-                        <span class="text-4xl font-serif text-brand-gold italic">Sob Consulta</span>
+                    <div>
+                        <h4 class="text-brand-gold font-sans font-light text-base md:text-lg uppercase tracking-[0.15em] mb-2">Teste de Microbiota Bioma</h4>
+                        <p class="text-[10px] font-black uppercase tracking-widest opacity-40">Análise Intestinal</p>
                     </div>
-                    <a href="https://wa.me/5521997318270?text=Olá%20Dra.%20Maria%20Clara!%20Gostaria%20de%20agendar%20uma%20Consulta%20Online%20(teleconsulta)%20com%20você." 
-                       target="_blank"
-                       class="flex items-center justify-center gap-2 w-full py-4 rounded-full border border-brand-gold text-brand-gold text-center text-xs font-black uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all">
-                        <i class="fab fa-whatsapp"></i>
-                        Agendar Online
-                    </a>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white/5 p-10 rounded-[32px] border border-white/5 hover:border-brand-gold/40 transition-all duration-500 group fade-in text-center flex flex-col items-center justify-center space-y-6" style="transition-delay: 0.3s">
+                    <div class="h-16 w-16 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-syringe text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-gold font-sans font-light text-base md:text-lg uppercase tracking-[0.15em] mb-2">Terapias Injetáveis</h4>
+                        <p class="text-[10px] font-black uppercase tracking-widest opacity-40">Reposição Otimizada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados Antes x Depois Section -->
+    <section class="py-32 bg-[#1a110a]">
+        <div class="px-6 md:px-12 lg:px-20 xl:px-40">
+            <div class="text-center mb-24 fade-in">
+                <h2 class="font-sans font-light text-3xl md:text-5xl uppercase tracking-[0.3em] text-brand-gold mb-4">Transformações Reais</h2>
+                <p class="opacity-40 text-xs font-bold uppercase tracking-[0.3em]">Resultados do Método RestauraBio</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+                <div class="fade-in">
+                    <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
+                        <img src="public/IMG-20260422-WA0036.jpg" alt="Resultado 1" class="w-full h-auto object-cover" referrerPolicy="no-referrer">
+                    </div>
+                </div>
+                <div class="fade-in" style="transition-delay: 0.1s">
+                    <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
+                        <img src="public/IMG-20260422-WA0035.jpg" alt="Resultado 2" class="w-full h-auto object-cover" referrerPolicy="no-referrer">
+                    </div>
+                </div>
+                <div class="fade-in" style="transition-delay: 0.2s">
+                    <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
+                        <img src="public/1776802532927.png" alt="Resultado 3" class="w-full h-auto object-cover" referrerPolicy="no-referrer">
+                    </div>
                 </div>
             </div>
         </div>
@@ -449,16 +553,16 @@
     <!-- Galeria de Fotos Section -->
     <section class="py-32 bg-brand-dark">
         <div class="px-6 md:px-12 lg:px-20 xl:px-40">
-            <h2 class="font-serif text-4xl md:text-5xl mb-20 text-center italic opacity-60">O Espaço & Resultados</h2>
+            <h2 class="font-sans font-light text-3xl md:text-4xl mb-20 text-center uppercase tracking-[0.3em] opacity-60">O Espaço</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 group overflow-hidden rounded-3xl">
-                    <img src="public/908e36e48a514a2c63af88af02c00628.jpg" alt="Clínica" class="w-full h-[300px] md:h-[500px] object-cover img-premium" referrerPolicy="no-referrer">
+                <div class="group overflow-hidden rounded-3xl h-[400px]">
+                    <img src="public/2025-08-21 (2).jpg" alt="Consultório" class="w-full h-full object-cover img-premium" referrerPolicy="no-referrer">
                 </div>
-                <div class="group overflow-hidden rounded-3xl">
-                    <img src="public/1776802274656.png" alt="Ambiente" class="w-full h-[300px] md:h-[500px] object-cover img-premium" referrerPolicy="no-referrer">
+                <div class="group overflow-hidden rounded-3xl h-[400px]">
+                    <img src="public/2025-08-21.jpg" alt="Ambiente" class="w-full h-full object-cover img-premium" referrerPolicy="no-referrer">
                 </div>
-                <div class="md:col-span-3 group overflow-hidden rounded-3xl">
-                    <img src="public/1776802532927.png" alt="Resultados" class="w-full h-[300px] md:h-[400px] object-cover img-premium" referrerPolicy="no-referrer">
+                <div class="group overflow-hidden rounded-3xl h-[400px]">
+                    <img src="public/2025-08-21 (1).jpg" alt="Detalhe do Espaço" class="w-full h-full object-cover img-premium" referrerPolicy="no-referrer">
                 </div>
             </div>
         </div>
@@ -467,10 +571,23 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-40 bg-[#1a110a] relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 class="font-serif text-5xl md:text-6xl mb-24 text-center italic italic text-brand-gold">Dúvidas Frequentes</h2>
+            <h2 class="font-sans font-light text-3xl md:text-5xl mb-24 text-center uppercase tracking-[0.3em] text-brand-gold">Dúvidas Frequentes</h2>
             
             <div class="space-y-6">
-                <!-- Q1 -->
+                <!-- Q1: Nova Pergunta Estratégica -->
+                <div class="accordion-item border border-brand-gold/30 rounded-3xl bg-brand-gold/[0.03] overflow-hidden fade-in">
+                    <button class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none transition-all hover:bg-brand-gold/[0.05]" onclick="toggleAccordion(this)">
+                        <span class="text-sm md:text-base font-bold uppercase tracking-widest text-brand-gold italic">Como é a sua função intestinal? Você vai ao banheiro todos os dias?</span>
+                        <svg class="accordion-icon w-6 h-6 text-brand-gold transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-10 pb-10 opacity-80 text-sm md:text-base leading-relaxed font-light italic text-brand-offwhite">
+                            Esta é a pergunta central da minha avaliação. Se você não evacua diariamente, seu corpo está reabsorvendo toxinas que deveriam ser eliminadas, gerando um estado de inflamação crônica. No <strong>Método RestauraBio</strong>, priorizamos a regularidade intestinal como o primeiro passo inegociável para o emagrecimento e para a saúde mental.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 (Antiga Q1) -->
                 <div class="accordion-item border border-white/5 rounded-3xl bg-white/[0.02] overflow-hidden fade-in">
                     <button class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none transition-all hover:bg-white/[0.03]" onclick="toggleAccordion(this)">
                         <span class="text-sm font-bold uppercase tracking-widest text-neutral-300 italic">Aceita plano de saúde?</span>
@@ -483,7 +600,7 @@
                     </div>
                 </div>
 
-                <!-- Q2 -->
+                <!-- Q3 (Antiga Q2) -->
                 <div class="accordion-item border border-white/5 rounded-3xl bg-white/[0.02] overflow-hidden fade-in">
                     <button class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none transition-all hover:bg-white/[0.03]" onclick="toggleAccordion(this)">
                         <span class="text-sm font-bold uppercase tracking-widest text-neutral-300 italic">O que é o Método RestauraBio?</span>
@@ -496,7 +613,7 @@
                     </div>
                 </div>
 
-                <!-- Q3 -->
+                <!-- Q4 (Antiga Q3) -->
                 <div class="accordion-item border border-white/5 rounded-3xl bg-white/[0.02] overflow-hidden fade-in">
                     <button class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none transition-all hover:bg-white/[0.03]" onclick="toggleAccordion(this)">
                         <span class="text-sm font-bold uppercase tracking-widest text-neutral-300 italic">Como funciona o retorno?</span>
@@ -504,20 +621,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="px-10 pb-10 opacity-50 text-sm leading-relaxed font-light">
-                            O modelo de acompanhamento varia conforme o plano escolhido. No Acompanhamento Premium, temos um contato contínuo via WhatsApp por 30 dias para ajustes diários, enquanto na consulta individual focamos no planejamento estratégico inicial.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q4 -->
-                <div class="accordion-item border border-white/5 rounded-3xl bg-white/[0.02] overflow-hidden fade-in">
-                    <button class="w-full px-10 py-8 flex items-center justify-between text-left focus:outline-none transition-all hover:bg-white/[0.03]" onclick="toggleAccordion(this)">
-                        <span class="text-sm font-bold uppercase tracking-widest text-neutral-300 italic">Atende crianças e gestantes?</span>
-                        <svg class="accordion-icon w-6 h-6 text-brand-gold transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="px-10 pb-10 opacity-50 text-sm leading-relaxed font-light">
-                            Sim! Devido à minha formação rigorosa na UFRJ, atuo em todas as fases da vida, sendo especialista em introdução alimentar e nutrição materna-infantil, sempre com o olhar atento à saúde intestinal desde cedo.
+                            O modelo de acompanhamento varia conforme o plano escolhido. Oferecemos pacotes de consultas para garantir que o seu tratamento tenha continuidade e suporte técnico para as fases de manutenção e consolidação de resultados.
                         </div>
                     </div>
                 </div>
@@ -818,6 +922,37 @@
             const encoded = encodeURIComponent(message);
             const url = `https://wa.me/5521997318270?text=${encoded}`;
             window.open(url, '_blank');
+        }
+
+        // 6. Plan Selection Logic
+        let selectedPlans = {
+            presencial: { nome: 'Consulta Avulsa', valor: 'R$ 350,00' },
+            online: { nome: 'Consulta Avulsa', valor: 'R$ 299,00' }
+        };
+
+        function selectPlano(tipo, nome, valor) {
+            selectedPlans[tipo] = { nome, valor };
+            
+            // Update UI: Toggle classes
+            const container = document.getElementById(`options-${tipo}`);
+            const items = container.querySelectorAll('.plano-item');
+            items.forEach(item => {
+                if (item.getAttribute('data-plano') === nome) {
+                    item.classList.add('active-plano');
+                } else {
+                    item.classList.remove('active-plano');
+                }
+            });
+
+            // Update Button Text
+            document.getElementById(`btn-text-${tipo}`).innerText = nome;
+        }
+
+        function enviarAgendamento(tipo) {
+            const plano = selectedPlans[tipo];
+            const msg = `Olá Dra. Maria Clara! Vi seu site e gostaria de agendar um atendimento *${tipo.toUpperCase()}*.\n\n*Opção selecionada:* ${plano.nome}\n*Valor:* ${plano.valor}\n\nComo podemos prosseguir com o agendamento?`;
+            const encoded = encodeURIComponent(msg);
+            window.open(`https://wa.me/5521997318270?text=${encoded}`, '_blank');
         }
 
         // Initialize Everything
