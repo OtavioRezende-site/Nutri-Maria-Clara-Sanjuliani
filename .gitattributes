@@ -1,4 +1,7 @@
-# Ensure binary files are handled correctly by Git and GitHub
+# Standard Git handling
+* text=auto
+
+# Ensure binary files are NEVER touched or converted to text
 *.png binary
 *.jpg binary
 *.jpeg binary
@@ -6,3 +9,6 @@
 *.ico binary
 *.webp binary
 *.pdf binary
+
+# SVGs are text-based
+*.svg text
