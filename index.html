@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -36,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
                         sans: ['Montserrat', 'sans-serif'],
+                        din: ['Barlow', 'sans-serif'],
                     },
                 }
             }
@@ -161,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="px-6 md:px-12 lg:px-20 xl:px-32 h-20 md:h-24 flex items-center justify-between gap-2">
             <!-- Logo & Name -->
             <div class="flex items-center gap-2 md:gap-4 flex-1 min-w-0">
-                <img src="1000245389-removebg-preview.png" alt="Logo Dra. Maria Clara" class="h-10 md:h-14 w-auto">
+                <img src="public/1000245389-removebg-preview.png" alt="Logo Dra. Maria Clara" class="h-10 md:h-14 w-auto">
                 <div class="font-sans font-light uppercase text-brand-gold leading-tight tracking-[0.2em] overflow-hidden">
                     <span class="block text-[8px] sm:text-[9px] md:text-sm whitespace-nowrap overflow-hidden text-ellipsis">Dra. Maria Clara</span>
                     <span class="block text-[8px] sm:text-[9px] md:text-sm whitespace-nowrap overflow-hidden text-ellipsis">Sanjuliani</span>
@@ -210,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <i class="fas fa-times text-3xl"></i>
         </button>
         
-        <img src="1000245389-removebg-preview.png" alt="Logo" class="h-16 mb-4 filter brightness-0 invert opacity-20">
+        <img src="public/1000245389-removebg-preview.png" alt="Logo" class="h-16 mb-4 filter brightness-0 invert opacity-20">
         
         <nav class="flex flex-col items-center space-y-6 text-sm font-black uppercase tracking-[0.3em]">
             <a href="#sobre" onclick="toggleMobileMenu()" class="hover:text-brand-gold">Sobre</a>
@@ -239,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <!-- Background Image -->
         <div class="absolute inset-0 z-[-2]">
-            <img src="1776802274656.png" alt="Dra. Maria Clara" class="w-full h-full object-cover opacity-40 md:opacity-50" style="object-fit: cover; object-position: center;">
+            <img src="public/1776802274656.png" alt="Dra. Maria Clara" class="w-full h-full object-cover opacity-40 md:opacity-50" style="object-fit: cover; object-position: center;">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
 
@@ -362,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="relative">
                     <div class="absolute -inset-4 border border-brand-gold/20 rounded-3xl -z-10"></div>
-                    <img src="ce19daf2-a838-47b1-bb94-d3693ff551a3-2.jpg" alt="Dra. Maria Clara Sanjuliani" class="w-full rounded-2xl shadow-3xl img-premium">
+                    <img src="public/ce19daf2-a838-47b1-bb94-d3693ff551a3-2.jpg" alt="Dra. Maria Clara Sanjuliani" class="w-full rounded-2xl shadow-3xl img-premium">
                 </div>
                 
                 <div class="space-y-10">
@@ -371,17 +372,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p class="text-lg md:text-xl font-sans font-medium uppercase tracking-[0.1em] opacity-60">Dra. Maria Clara Sanjuliani</p>
                     </div>
                     
-                    <div class="space-y-6 text-lg md:text-2xl font-serif text-brand-offwhite leading-relaxed italic font-light opacity-90">
-                        <p>
-                            "Especialista em saúde intestinal e pós-graduada em nutrição ortomolecular e fitoterapia, proporcionando melhora da microbiota, emagrecimento real e bem-estar duradouro."
+                    <div class="space-y-6 text-lg md:text-xl font-din text-brand-offwhite leading-relaxed opacity-90">
+                        <p class="font-serif italic text-2xl md:text-3xl text-brand-gold mb-6">
+                            Especialista em saúde intestinal, nutrição ortomolecular e fitoterapia, ajudo você a transformar sua saúde através do intestino:
                         </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 gap-8 text-xs font-bold uppercase tracking-widest opacity-40">
-                        <p>✓ Saúde Gastrointestinal</p>
-                        <p>✓ Nutrição Ortomolecular</p>
-                        <p>✓ Fitoterapia Avançada</p>
-                        <p>✓ Modulação Metabólica</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-gold">•</span>
+                                <div><strong class="text-brand-gold">Combate à Inflamação:</strong> Redução de gases e inchaço abdominal.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-gold">•</span>
+                                <div><strong class="text-brand-gold">Peso Ideal:</strong> Estratégias para o corpo que você deseja.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-gold">•</span>
+                                <div><strong class="text-brand-gold">Imunidade Forte:</strong> Proteção que começa de dentro para fora.</div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -588,17 +596,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
                 <div class="fade-in">
                     <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
-                        <img src="1776802532927.png" alt="Transformação Real 1" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
+                        <img src="public/1776802532927.png" alt="Transformação Real 1" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
                 <div class="fade-in" style="transition-delay: 0.2s">
                     <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
-                        <img src="IMG-20260422-WA0035.jpg" alt="Transformação Real 2" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
+                        <img src="public/IMG-20260422-WA0035.jpg" alt="Transformação Real 2" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
                 <div class="fade-in" style="transition-delay: 0.4s">
                     <div class="rounded-[40px] overflow-hidden border-2 border-brand-gold/20 shadow-2xl transition-all duration-700 hover:border-brand-gold/60">
-                        <img src="IMG-20260422-WA0036.jpg" alt="Transformação Real 3" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
+                        <img src="public/IMG-20260422-WA0036.jpg" alt="Transformação Real 3" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
             </div>
@@ -611,13 +619,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2 class="font-sans font-light text-3xl md:text-4xl mb-20 text-center uppercase tracking-[0.15em] md:tracking-[0.3em] text-brand-gold">O Espaço</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="group overflow-hidden rounded-3xl h-[400px]">
-                    <img src="2025-08-21 (1).jpg" alt="Consultório" class="w-full h-full object-cover img-premium">
+                    <img src="public/2025-08-21 (1).jpg" alt="Consultório" class="w-full h-full object-cover img-premium">
                 </div>
                 <div class="group overflow-hidden rounded-3xl h-[400px]">
-                    <img src="2025-08-21.jpg" alt="Ambiente" class="w-full h-full object-cover img-premium">
+                    <img src="public/2025-08-21.jpg" alt="Ambiente" class="w-full h-full object-cover img-premium">
                 </div>
                 <div class="group overflow-hidden rounded-3xl h-[400px]">
-                    <img src="2025-08-21 (2).jpg" alt="Detalhe do Espaço" class="w-full h-full object-cover img-premium">
+                    <img src="public/2025-08-21 (2).jpg" alt="Detalhe do Espaço" class="w-full h-full object-cover img-premium">
                 </div>
             </div>
         </div>
@@ -676,7 +684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="px-6 md:px-12 lg:px-20 xl:px-40">
             <div class="grid md:grid-cols-4 gap-20 items-start mb-32">
                 <div class="md:col-span-2 space-y-12">
-                    <img src="1000245389-removebg-preview.png" alt="Logo" class="h-20">
+                    <img src="public/1000245389-removebg-preview.png" alt="Logo" class="h-20">
                     <p class="font-serif text-3xl italic opacity-40 leading-snug">Excelência em nutrição intestinal e metabolismo estratégico.</p>
                     <div class="flex gap-8 text-xs font-black uppercase tracking-[0.3em]">
                         <a href="https://wa.me/5521997318270?text=Olá%20Dra.%20Maria%20Clara!%20Vi%20suas%20informações%20no%20site%20e%20gostaria%20de%20entrar%20em%20contato." target="_blank" class="text-brand-gold hover:text-brand-copper transition-colors flex items-center gap-2">
@@ -1020,4 +1028,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
-
